@@ -14,22 +14,34 @@
 .log/
 .ssh/
 .xsession-errors*
+.gitconfig
 
 # Specific ignores, personal to me.
 .config/Cadence/
+.config/Code/
 .config/Epic/
 .config/GIMP/
 .config/PulseEffects/
+.config/REAPER/
 .config/QtProject.conf
 .config/StardewValley/
 .config/cef_user_data/
+.config/dconf/
 .config/falkTX/
+.config/lutris/
+.config/jack/
+.config/gtk-2.0/
 .config/unity3d/
 .config/openmw/
 .config/pulse/
 .config/htop/
 .config/discord/
 .config/desmume/
+.config/nvim/plugged/
+.config/mpd/*
+!.config/mpd/mpd.conf
+.config/vifm/*
+!.config/vifm/vifmrc
 .mozilla/
 .mono/
 .nv/
@@ -46,6 +58,7 @@
 .vbam/
 .vscode/
 .cddbslave/
+.gdmap/
 
 .config/krita*
 .jackdrc
