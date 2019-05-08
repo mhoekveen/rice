@@ -28,6 +28,21 @@
 .mozilla/
 .mono/
 .nv/
+.pulse/
+.renpy/
+.pki/
+.gnupg/
+.davfs2/
+.steam/
+.wine/
+.w3m/
+.steam*
+Bitwig Studio/
+Downloads/
+Files/
+Lilian/
+Pictures/
+VPN/
 
 .BitwigStudio
 .asoundrc
