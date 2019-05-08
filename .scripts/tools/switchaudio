@@ -1,0 +1,8 @@
+#!/bin/sh
+# Sets all audio to specified sink
+
+SINKS=$(pactl list short sink-inputs | sed 's/^[^0-9]*\([0-9]\+\).*/\1/')
+for i in $SINKS; do
+	pactl move-sink-input $i $1;
+done
+pactl set-default-sink $1
