@@ -1,0 +1,34 @@
+# File type ignores
+*.png
+*.tar
+*.tar.*
+*.zip
+*.log
+*.out
+
+# General File ignores
+.Xauthority
+.bash_history
+.cache/
+.local/
+.log/
+.ssh/
+.xsession-errors*
+
+# Specific ignores, personal to me.
+.config/Cadence/
+.config/Epic/
+.config/GIMP/
+.config/PulseEffects/
+.config/QtProject.conf
+.config/StardewValley/
+.config/cef_user_data/
+.config/falkTX/
+.config/unity3d/
+.mozilla/
+.mono/
+.nv/
+
+.BitwigStudio
+.asoundrc
+.nvidia-settings-rc
