@@ -1,9 +1,11 @@
 #!/bin/sh
-alias ka="killall" \
+alias 	ka="killall" \
+	vbam="visualboyadvance-m" \
 	mpv="mpv --input-ipc-server=/tmp/mpvsoc$(date +%s)" \
 	magit="nvim -c Magit" \
 	p="sudo pacman" \
-	SS="sudo systemctl" \
+	s="sudo systemctl" \
+	ss="sudo systemctl start" \
 	f="vifm" \
 	g="git" \
 	trem="transmission-remote" \
@@ -18,11 +20,13 @@ alias ka="killall" \
 	ccat="highlight --out-format=ansi" \
 	yt="youtube-dl --add-metadata -i -o '%(upload_date)s-%(title)s.%(ext)s'" \
 	yta="yt -x -f bestaudio/best" \
-	YT="youtube-viewer" \
 	ref="shortcuts >/dev/null; source ~/.shortcuts" \
 	upc="sudo pacman -Syu; pkill -RTMIN+8 i3blocks" \
 	lsp="pacman -Qett --color=always | less" \
-	ffmpeg="ffmpeg -hide_banner"
+	ffmpeg="ffmpeg -hide_banner" \
+	swa="switchaudio" \
+	mic="switchaudio 0" \
+	speak="switchaudio 1"
 
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d" # Use neovim for vim if present.
 
