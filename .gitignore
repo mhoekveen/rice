@@ -25,6 +25,11 @@
 .config/cef_user_data/
 .config/falkTX/
 .config/unity3d/
+.config/openmw/
+.config/pulse/
+.config/htop/
+.config/discord/
+.config/desmume/
 .mozilla/
 .mono/
 .nv/
@@ -36,7 +41,16 @@
 .steam/
 .wine/
 .w3m/
+.oracle_jre_usage/
+.paradoxinteractive/
+.vbam/
+.vscode/
+.cddbslave/
+
+.config/krita*
+.jackdrc
 .steam*
+.pulse-cookie
 Bitwig Studio/
 Downloads/
 Files/
