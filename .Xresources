@@ -37,16 +37,16 @@ URxvt.scrollBar: false
 URxvt.scrollstyle: plain
 URxvt*termName: xterm-256color
 URxvt.visualBell: false
-URxvt.font:	xft:Source Code Pro:size=20, \
-		xft:Unifont:size=24, \
+URxvt.font:	xft:Source Code Pro:size=16, \
+		xft:Unifont:size=16, \
 		xft:Linux Libertine Mono, \
 		xft:Noto Sans Mono Regular4, \
-		xft:Noto Sans Mono CJK SC:size=24, \
-		xft:Noto Sans Mono CJK HK:size=24, \
-		xft:Noto Sans Mono CJK KR:size=24, \
-		xft:Noto Sans Mono CJK TC:size=24, \
-		xft:Noto Sans Mono CJK JP:size=24, \
-		xft:Liberation Mono:size=24
+		xft:Noto Sans Mono CJK SC, \
+		xft:Noto Sans Mono CJK HK, \
+		xft:Noto Sans Mono CJK KR, \
+		xft:Noto Sans Mono CJK TC, \
+		xft:Noto Sans Mono CJK JP, \
+		xft:Liberation Mono
 !URxvt.bg:black
 
 URxvt.urlLauncher: chrome
