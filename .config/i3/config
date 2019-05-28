@@ -10,6 +10,8 @@ gaps inner 30
 gaps outer 90
 
 set $smallgap 40
+set $smallscreen DVI-I-1
+set $bigscreen DP-4
 set $term --no-startup-id $TERMINAL
 set $smallterm --no-startup-id $TERMINAL
 set $mod Mod4
@@ -59,21 +61,21 @@ bindsym $mod+Shift+8	move container to workspace $ws8
 bindsym $mod+Shift+9	move container to workspace $ws9
 bindsym $mod+Shift+0	move container to workspace $ws10
 
-workspace $ws1 output DP-1
-workspace $ws2 output DVI-I-1
-workspace $ws3 output DVI-I-1
-workspace $ws5 output DVI-I-1
-workspace $ws8 output DP-1
-workspace $ws9 output DP-1
-workspace $ws10 output DVI-I-1
+workspace $ws1 output $bigscreen
+workspace $ws2 output $smallscreen
+workspace $ws3 output $bigscreen
+workspace $ws5 output $smallscreen
+workspace $ws8 output $bigsceen
+workspace $ws9 output $bigscreen
+workspace $ws10 output $smallscreen
 
 workspace $ws2 gaps inner $smallgap
-workspace $ws3 gaps inner $smallgap
+# workspace $ws3 gaps inner $smallgap
 workspace $ws5 gaps inner $smallgap
 workspace $ws10 gaps inner $smallgap
 
 workspace $ws2 gaps outer 0
-workspace $ws3 gaps outer 0
+# workspace $ws3 gaps outer 0
 workspace $ws5 gaps outer 0
 workspace $ws10 gaps outer 0
 
@@ -90,7 +92,7 @@ for_window [class="discord"] border pixel 0px
 assign [class=^Steam$] $ws4
 assign [class="discord"] $ws3
 assign [class="REAPER"] $ws5
-assign [class="porn"] $ws10
+assign [class="alone"] $ws10
 
 for_window [class="^Steam$" title="^Friends$"] floating enable
 for_window [class="^Steam$" title="Steam - News"] floating enable
@@ -182,13 +184,13 @@ bindsym $mod+Shift+BackSpace	exec --no-startup-id $reboot
 
 bindsym $mod+Shift+Tab		exec --no-startup-id dmenuunicode
 
-# porn time!
-bindsym $mod+Shift+Delete	workspace $ws10 ; workspace $ws9; exec $term -e $FILE ~/Files/Porn ; exec --no-startup-id $BROWSER -P Shinobi --class=porn ; [class="porn"] move workspace $ws10 ; exec --no-startup-id switchaudio 0
+# alone time!
+bindsym $mod+Shift+Delete	workspace $ws10 ; workspace $ws9; exec $term -e $FILE ~/Files ; exec --no-startup-id $BROWSER -P Shinobi --class=alone ; [class="alone"] move workspace $ws10 ; exec --no-startup-id switchaudio 2
 bindsym $mod+Delete		workspace $ws1 ; workspace $ws2; [workspace=$ws10] kill ; [workspace=$ws9] kill
 
 # Show selection:
-bindsym $mod+Insert		exec --no-startup-id showclip
-bindsym $mod+Pause		exec --no-startup-id xcqr
+# bindsym $mod+Insert		exec --no-startup-id showclip
+# bindsym $mod+Pause		exec --no-startup-id xcqr
 
 # #---Letter Key Bindings---# #
 bindsym $mod+q			[con_id="__focused__" instance="^(?!dropdown_).*$"] kill
@@ -343,8 +345,9 @@ bindsym $mod+bracketright 	exec --no-startup-id lmc forward 10
 bindsym $mod+Shift+bracketright exec --no-startup-id lmc forward 120
 
 # For screenshots and recording
-bindsym Print 			exec --no-startup-id maim pic-full-"$(date '+%y%m%d-%H%M-%S').png"
-bindsym Shift+Print 		exec --no-startup-id maim -s | xclip -sel clip -t image/png
+# bindsym Print 			exec --no-startup-id maim pic-full-"$(date '+%y%m%d-%H%M-%S').png"
+bindsym Print	 		exec --no-startup-id maim -s | xclip -sel clip -t image/png
+bindsym Shift+Print		exec --no-startup-id dmenurecord
 bindsym $mod+Print		exec --no-startup-id maimpick
 bindsym $mod+Scroll_Lock	exec --no-startup-id "killall screenkey || screenkey"
 bindsym XF86Launch1		exec --no-startup-id xset dpms force off
